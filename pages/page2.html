@@ -1,0 +1,47 @@
+<markdown>
+More formatting wonders
+=======================
+
+## H2 heading
+
+Observe the sidemenu as you scroll, how it reacts to these subheadings
+
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+
+### H3 heading
+
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+
+### H3 heading (2nd)
+
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+
+When you look at the code of this particular partial view, notice how
+`<h3 id="needs-an-id-otherwise-wont-work">Custom HTML</h3>` requires an
+id in order for side menu to function properly.
+
+</markdown>
+
+<h3 id="needs-an-id-otherwise-wont-work">Custom HTML</h3>
+<div class="row">
+	<div class="col-sm-4">
+		<div class="btn-group">
+			<button type="button" class="btn btn-default">Left</button>
+			<button type="button" class="btn btn-default">Middle</button>
+			<button type="button" class="btn btn-default">Right</button>
+		</div>
+<markdown>
+You can use custom HTML instead of markdown tags.
+Try resizing this window and see what happens
+</markdown>
+	</div>
+	<div class="col-sm-4">
+		<div ng-include="'pages/page2a.html'"></div>
+	</div>
+	<div class="col-sm-4">
+		<div ng-include="'pages/page2b.html'"></div>
+	</div>
+</div>

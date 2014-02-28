@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>Easy Docu</title>
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+	<link href="css/highlight-styles.css" rel="stylesheet">
+	
+	<!-- Javascript -->
+	<script type="text/javascript" src="js/jquery-2.1.0.min.js" ></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/showdown.js"></script>
+	<script type="text/javascript" src="js/highlight.js"></script>
+	<script type="text/javascript" src="js/ng-showdown.js"></script>
+	<script type="text/javascript" src="js/zscript.js"></script>
+</head>
+<body ng-app>
+
+	<!-- Docs page layout -->
+    <div class="bs-header" >
+      <div class="container">
+        <h1>Easy Docu</h1>
+        <p>An ecosystem of JS libraries to facilitate documentation</p>
+      </div>
+    </div>
+	
+	<div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print affix"
+				role="complementary"
+				auto-menu-affix
+				auto-menu-affix-delay="500"
+				content-div="#docs-content">
+            <ul class="nav bs-sidenav">
+			</ul>
+		  </div>
+		</div>
+		<div class="col-md-9" id="docs-content" ng-include="'pages/_index.html'">
+		</div>
+	  </div>
+	</div>
+
+</body>
+</html>

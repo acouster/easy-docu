@@ -22,7 +22,9 @@
     <div class="bs-header" >
       <div class="container">
         <h1>Easy Docu</h1>
-        <p>An ecosystem of JS libraries to facilitate documentation</p>
+        <p>An ecosystem of JS libraries to facilitate documentation.
+			<a href="http://softwaremaniacs.org/playground/showdown-highlight/" target="_blank">Edit Showdown here.</a>
+		</p>
       </div>
     </div>
 	
@@ -38,7 +40,165 @@
 			</ul>
 		  </div>
 		</div>
-		<div class="col-md-9" id="docs-content" ng-include="'pages/_index.html'">
+		<div class="col-md-9" id="docs-content" >
+
+<markdown>
+Easy Docu
+=========
+
+NOTE: works best in Firefox. Chrome and IE don't allow cross-domain. Grrr...
+
+Anywhoo... Why I called it Easy Docu? Answer: I don't know. So here is a quick guide.
+
+## Basics
+
+Modify this page as you see fit, just don't touch the scripts... MMMKAY?
+
+Use the `<markdown></markdown>` tag like in the examples, the javascript will
+convert it all to a nice rich html. If you don't prefer to use markdown, HTML is welcome
+too. See below for example.
+
+## Side menu is automatic!
+
+500 millisecods after the page has loaded, a side menu is created with `affix` and
+`scrollspy` bootstrap functionalities. The contents of the menu are generated automatically
+from the H1-H5 tags found on the entire page. So use your headings with care.
+Oh, one more thing. Showdown.js generates the ids for you H1-H5 tags so please make
+sure all your headings are unique. mmmKAY?
+
+To change the 500 millisecond delay you can modify the `auto-menu-affix-delay`
+attribute in `index.html`, line 35 (or somewhere around there, it's a small file,
+find it yourselves!)
+
+	<div class="bs-sidebar hidden-print affix"
+			role="complementary"
+			auto-menu-affix
+			auto-menu-affix-delay="500"
+			content-div="#docs-content">
+		<ul class="nav bs-sidenav">
+		</ul>
+	</div>
+
+By the way, look at how slickly the code is rendered eh? eh? EH?
+
+More formatting wonders
+=======================
+
+## H2 heading
+
+Observe the sidemenu as you scroll, how it reacts to these subheadings
+
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+
+### H3 heading
+
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+
+### H3 heading (2nd)
+
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+
+When you look at the code of this particular partial view, notice how
+`<h3 id="needs-an-id-otherwise-wont-work">Custom HTML</h3>` requires an
+id in order for side menu to function properly.
+
+</markdown>
+
+<h3 id="needs-an-id-otherwise-wont-work">Custom HTML</h3>
+<div class="row">
+	<div class="col-sm-4">
+		<div class="btn-group">
+			<button type="button" class="btn btn-default">Left</button>
+			<button type="button" class="btn btn-default">Middle</button>
+			<button type="button" class="btn btn-default">Right</button>
+		</div>
+<markdown>
+You can use custom HTML instead of markdown tags.
+Try resizing this window and see what happens
+</markdown>
+	</div>
+	<div class="col-sm-4">
+<markdown>
+You can use custom HTML instead of markdown tags.
+Try resizing this window and see what happens
+</markdown>
+	</div>
+	<div class="col-sm-4">
+<markdown>
+**Column 3**
+
+More subsection tests. You can ng-include in ng-include in ng-include as much as you like!
+
+Benefits of carrots:
+
+ - useful
+ - vitamin A
+ - make you happy
+ - make kids happy
+
+</markdown>
+
+	</div>
+  </div>
+
+<markdown>
+Showdown/markdown syntax
+========================
+
+[This page](http://softwaremaniacs.org/playground/showdown-highlight/) lets you
+create HTML by entering text in a simple format that's easy to read and write.
+
+  - Type Markdown text in the left window
+  - See the HTML in the right
+
+## What is markdown
+
+Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site] [1]:
+
+> The overriding design goal for Markdown's
+> formatting syntax is to make it as readable 
+> as possible. The idea is that a
+> Markdown-formatted document should be
+> publishable as-is, as plain text, without
+> looking like it's been marked up with tags
+> or formatting instructions.
+
+This document is written in Markdown; you can see the plain-text version on the left.  To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.  You can see a Markdown syntax guide by switching the right-hand window from *Preview* to *Syntax Guide*.
+
+Showdown is a Javascript port of Markdown.  You can get the full [source code] by clicking on the version number at the bottom of the page.
+
+**Example of bold text** *Example of italic text*
+
+  [john gruber]: http://daringfireball.net/
+  [1]: http://daringfireball.net/projects/markdown/
+  [source code]: http://www.attacklab.net/showdown-v0.9.zip
+  [blank page]: ?blank=1 "Clear all text"
+
+
+## Syntax highlighting
+
+When combined with [highlight.js][] this starts looking as a kind of IDE :-)
+
+HTML:
+
+    <h1>HTML codehjhk</h1>
+    <p class="some">This is an example</p>
+
+Python:
+
+    def func():
+      for i in [1, 2, 3]:
+        print "%s" % i
+
+
+[highlight.js]: http://softwaremaniacs.org/soft/highlight/en/
+</markdown>
+
+
+
 		</div>
 	  </div>
 	</div>

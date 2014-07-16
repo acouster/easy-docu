@@ -1,7 +1,8 @@
 Easy Docu
 =========
 
-Anywhoo... Why I called it Easy Docu? Answer: I don't know. So here is a quick guide.
+Combines the ease of Markdown/Showdown syntax with Bootstrap's scrollspy.
+Result: beautiful page(s) of documentation with an automatically generated hierarchical jump-to menu.
 
 ## Basics
 
